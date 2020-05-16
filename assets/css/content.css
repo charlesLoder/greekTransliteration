@@ -32,3 +32,49 @@ button {
 .example {
   margin-left: 25px;
 }
+
+.accordion {
+  background-color: #f4f3f0;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 0.9em;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+  padding: 0.75em 1.25em 0;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel > p {
+  font-size: 0.9em;
+}
+
+.grc-text {
+  font-family: "SBL Greek", "Times New Roman", Times, serif;
+  font-size: 1.2em;
+}

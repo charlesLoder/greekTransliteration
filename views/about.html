@@ -1,30 +1,145 @@
 <extends src="layout.html">
     <block name='content'>
         <h1>About</h1>
-        <h2>What does this app do?</h2>
-        <p>This app transliterates Greek text according to SBL guidelines (<cite>The SBL Handbook of Style</cite> §5.3).
-        </p>
-        <h2>Why use transliteration?</h2>
-        <p>Though the advent of Unicode has allowed many scripts to live in the digital world, transliteration is still
-            useful. For starters, many publishers still require it. More importantly, transliterating Greek reveals the
-            pronunciation of words to readers who may not have training in ancient languages.</p>
-        <h2>Why <i>this</i> methods of transliteration?</h2>
-        <p>In technical works, Greek is usually left in its original characters. According to the SBL Handbook:</p>
-        <blockquote>In books meant for a broad audience, editors may elect to use a Greek font only in notes and
-            parentheses, transliterating Greek words that are necessary in the main text. Thus no provision is made for
-            transliteration of <i>iōta</i> subscript, diaeresis, digamma, accents, and the like...</blockquote>
-        <p>The following specifications are given for transliterating Greek:</p>
-        <ol>
-            <li>When a gamma appears before a γ, κ, ξ, or χ (gamma nasal), it is transliterated <i>n</i>.</li>
-            <li>The vowels <i>ēta</i> and <i>ōmega</i> should be indicated with a macron.</li>
-            <li>Initial ῥ is transliterated <i>rh</i>. The second <i>rhō</i> in medial double <i>rhō</i> is also
-                transliterated <i>rhō</i>: e.g., Πύρρος = <i>Pyrrhos</i>.</li>
-            <li>When <i>upsilon</i> is part of a diphthong, it is transliterated <i>u</i> (<i>au, eu, ēu, ou, ui</i>).
-                When it appears independently, it is transliterated <i>y</i>: e.g., κύριος = <i>kyrios</i>, not
-                <i>kurios</i>.</li>
-            <li>The rough breathing mark ( ̔) is transliterated <i>h</i> preceding an initial vowel or diphthong: e.g.,
-                ὕμνος = <i>hymnos</i>; αἵρεσις = <i>hairesis</i>.</li>
-        </ol>
+        <button class="accordion">What does this app do?</button>
+        <div class="panel">
+            <p>This app transliterates Greek text according to SBL guidelines (<cite>The SBL Handbook of Style</cite>
+                §5.3).
+            </p>
+        </div>
+        <button class="accordion">Why use transliteration?</button>
+        <div class="panel">
+            <p>
+                Though the advent of Unicode has allowed many scripts to live in the digital world, transliteration is
+                still
+                useful. For starters, many publishers still require it. More importantly, transliterating Greek reveals
+                the
+                pronunciation of words to readers who may not have training in ancient languages.
+            </p>
+        </div>
+        <button class="accordion">Why <i>this</i> methods of transliteration?</button>
+        <div class="panel">
+            <p>In technical works, Greek is usually left in its original characters. According to the SBL Handbook:</p>
+            <blockquote>
+                In books meant for a broad audience, editors may elect to use a Greek font only in notes and
+                parentheses, transliterating Greek words that are necessary in the main text. Thus no provision is made
+                for
+                transliteration of <i>iōta</i> subscript, diaeresis, digamma, accents, and the like...
+            </blockquote>
+        </div>
+        <button class="accordion">Transliteration of Consonants <i>&</i> Vowels</button>
+        <div class="panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Consonant</th>
+                        <th>Transliteration</th>
+                        <th>Consonant</th>
+                        <th>Transliteration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="grc-text">Α α</span> <i>alpha</i></td>
+                        <td><i>a</i></td>
+                        <td><span class="grc-text">Ν ν</span> <i>nu</i></td>
+                        <td><i>n</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Β β</span> <i>bēta</i></td>
+                        <td><i>b</i></td>
+                        <td><span class="grc-text">Ξ ξ</span> <i>xi</i></td>
+                        <td><i>x</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Γ γ</span> <i>gamma</i></td>
+                        <td><i>g</i></td>
+                        <td><span class="grc-text">Ο ο</span> <i>omicron</i></td>
+                        <td><i>o</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Δ δ</span> <i>delta</i></td>
+                        <td><i>d</i></td>
+                        <td><span class="grc-text">Π π</span> <i>pi</i></td>
+                        <td><i>p</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Ε ε</span> <i>epsilon</i></td>
+                        <td><i>e</i></td>
+                        <td><span class="grc-text">Ρ ρ</span> <i>rho</i></td>
+                        <td><i>r</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Ζ ζ</span> <i>zēta</i></td>
+                        <td><i>z</i></td>
+                        <td><span class="grc-text">Σ σ,ς</span> <i>sigma</i></td>
+                        <td><i>s</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Η η</span> <i>ēta</i></td>
+                        <td><i>ē</i></td>
+                        <td><span class="grc-text">Τ τ</span> <i>tau</i></td>
+                        <td><i>t</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Θ θ</span> <i>thēta</i></td>
+                        <td><i>th</i></td>
+                        <td><span class="grc-text">Υ υ</span> <i>upsilon</i></td>
+                        <td><i>u</i> or <i>y</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Ι ι</span> <i>iōta</i></td>
+                        <td><i>i</i></td>
+                        <td><span class="grc-text">Φ φ</span> <i>phi</i></td>
+                        <td><i>ph</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Κ κ</span> <i>kappa</i></td>
+                        <td><i>k</i></td>
+                        <td><span class="grc-text">Χ χ</span> <i>chi</i></td>
+                        <td><i>ch</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Λ λ</span> <i>lambda</i></td>
+                        <td><i>l</i></td>
+                        <td><span class="grc-text">Ψ ψ</span> <i>psi</i></td>
+                        <td><i>ps</i></td>
+                    </tr>
+                    <tr>
+                        <td><span class="grc-text">Μ μ</span> <i>mu</i></td>
+                        <td><i>m</i></td>
+                        <td><span class="grc-text">Ω ω</span> <i>ōmega</i></td>
+                        <td><i>ō</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="accordion">Transliteration Rules</button>
+        <div class="panel">
+            <ol>
+                <li>When a gamma appears before a <span class="grc-text">γ</span>, <span class="grc-text">κ</span>,
+                    <span class="grc-text">ξ</span>, or <span class="grc-text">χ</span> (gamma nasal), it is
+                    transliterated
+                    <i>n</i>.</li>
+                <li>The vowels <i>ēta</i> and <i>ōmega</i> should be indicated with a macron.</li>
+                <li>Initial <span class="grc-text">ῥ</span> is transliterated <i>rh</i>. The second <i>rhō</i> in medial
+                    double <i>rhō</i> is also
+                    transliterated <i>rhō</i>: e.g., <span class="grc-text">Πύρρος</span> = <i>Pyrrhos</i>.</li>
+                <li>When <i>upsilon</i> is part of a diphthong, it is transliterated <i>u</i> (<i>au, eu, ēu, ou,
+                        ui</i>).
+                    When it appears independently, it is transliterated <i>y</i>: e.g., <span
+                        class="grc-text">κύριος</span>
+                    = <i>kyrios</i>, not
+                    <i>kurios</i>.</li>
+                <li>The rough breathing mark ( ̔) is transliterated <i>h</i> preceding an
+                    initial vowel or diphthong: e.g.,
+                    <span class="grc-text">ὕμνος</span> = <i>hymnos</i>; <span class="grc-text">αἵρεσις</span> =
+                    <i>hairesis</i>.</li>
+            </ol>
+        </div>
 
+    </block>
+    <block name='javascript'>
+        <script src='js/about.js' defer></script>
     </block>
 </extends>
