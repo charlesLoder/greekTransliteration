@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
   return {
+    pathPrefix: "/greekTransliteration/",
     dir: {
       input: "src",
       output: "dist",

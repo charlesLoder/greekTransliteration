@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
     <!-- Halfmoon JS -->
     <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
-    <script src="assets/friconix.js"></script>
+    <script src="{{ '/assets/friconix.js ' | url }}"></script>
     <title>{{ config.title }} - {{ title }}</title>
     {% capture css %} {% include '../assets/css/main.css' %}{% endcapture %}
     <style>
