@@ -1,41 +1,35 @@
-// const htmlmin = require("html-minifier");
-// const pluginESbuild = require("@jamshop/eleventy-plugin-esbuild");
-// const CleanCSS = require("clean-css");
+const htmlmin = require("html-minifier");
+const esbuild = require("esbuild");
+const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
-  //   eleventyConfig.addPlugin(pluginESbuild, {
-  //     entryPoints: {
-  //       transliterate: "src/assets/js/transliterate.js",
-  //       remove: "src/assets/js/remove.js",
-  //       friconix: "src/assets/js/friconix.js",
-  //     },
-  //     output: "dist/assets",
-  //     esbuild: {
-  //       format: "esm",
-  //     },
-  //   });
+  eleventyConfig.on("afterBuild", () => {
+    return esbuild.build({
+      entryPoints: ["./src/assets/js/transliterate.js", "./src/assets/js/friconix.js"],
+      bundle: true,
+      outdir: "dist/assets",
+      minify: Boolean(process.env.ELEVENTY_PRODUCTION),
+      sourcemap: !Boolean(process.env.ELEVENTY_PRODUCTION),
+    });
+  });
 
-  //   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-  //     if (process.env.ELEVENTY_PRODUCTION && outputPath && outputPath.endsWith(".html")) {
-  //       let minified = htmlmin.minify(content, {
-  //         useShortDoctype: true,
-  //         removeComments: true,
-  //         collapseWhitespace: true,
-  //       });
-  //       return minified;
-  //     }
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (process.env.ELEVENTY_PRODUCTION && outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
 
-  //     return content;
-  //   });
+    return content;
+  });
 
-  // adds a copy to dist
-  //   eleventyConfig.addPassthroughCopy("src/assets/img/favicon.svg");
-  //   eleventyConfig.addPassthroughCopy("src/assets/img/hebrew-transliteration-card.png");
-  // triggers a rebuild when anything in here changes
-  eleventyConfig.addWatchTarget("src/assets/css/main.css");
-  //   eleventyConfig.addFilter("cssmin", function (code) {
-  //     return new CleanCSS({}).minify(code).styles;
-  //   });
+  eleventyConfig.addWatchTarget("src/assets");
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
   return {
     dir: {
       input: "src",
@@ -44,6 +38,6 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
       includes: "_includes",
     },
-    templateFormats: ["njk", "md", "html", "11ty.js"],
+    templateFormats: ["html"],
   };
 };
