@@ -4,17 +4,29 @@
   "version": "2.0.0",
   "author": "charlesLoder",
   "bugs": "https://github.com/charlesLoder/greektransliteration/issues",
-  "dependencies": {
-    "greek-transliteration": "^1.0.0"
-  },
   "homepage": "https://github.com/charlesLoder/greektransliteration",
-  "private": true,
   "repository": "https://github.com/charlesLoder/greektransliteration",
+  "keywords": [
+    "greek",
+    "transliteration",
+    "SBL",
+    "romanization",
+    "koine"
+  ],
   "scripts": {
-    "start": "",
-    "build": ""
+    "start": "eleventy --serve",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production",
+    "update": "ncu"
+  },
+  "dependencies": {
+    "greek-transliteration": "^2.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "clean-css": "^5.3.0",
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.14.39",
+    "html-minifier": "^4.0.0",
+    "npm-check-updates": "^13.0.3"
   }
 }
