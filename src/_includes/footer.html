@@ -1,0 +1,17 @@
+<script src="assets/friconix.js"></script>
+<div class="footer-container">
+  <div class="footer-contact">Charles Loder &copy 2020</div>
+  <div class="footer-icons">
+    {% for icon in config.socialIcons %}
+    <a
+      href="{{ icon.url | url }}"
+      aria-label="{{ icon.text }}"
+      class="social-link ml-5"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="{{ icon.faIcon }}"></i>
+    </a>
+    {% endfor %}
+  </div>
+</div>

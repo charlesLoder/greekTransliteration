@@ -1,0 +1,41 @@
+:root {
+  --dark-green: #58725b;
+  --light-green: #8cad82;
+  --primary-color: var(--dark-green);
+  --primary-color--hover: var(--light-green);
+  --primary-box-shadow-color: var(--light-green);
+  --primary-box-shadow-color-darker: var(--dark-green);
+  /* background image */
+  --lm-base-body-bg-image: linear-gradient(#f7f7f7, #ced6e0);
+  --dm-base-body-bg-image: linear-gradient(#191c20, #111417);
+
+  --lm-button-primary-border-color-hover: var(--light-green);
+  --dm-button-primary-border-color-hover: var(--light-green);
+
+  --lm-button-primary-bg-color-hover: var(--light-green);
+  --dm-button-primary-bg-color-hover: var(--light-green);
+
+  --lm-link-text-color-hover: var(--light-green);
+  --dm-link-text-color-hover: var(--light-green);
+
+  --dm-input-border-color-focus: var(--light-green);
+  --lm-input-border-color-focus: var(--light-green);
+}
+
+.textarea-wrapper:nth-child(even) {
+  margin-top: 1rem;
+}
+
+.textarea-wrapper textarea {
+  height: 8rem;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-top: 0.5rem;
+  color: black;
+  resize: none;
+}
+
+.grc {
+  font-family: SBL Greek, Times New Roman, serif;
+}

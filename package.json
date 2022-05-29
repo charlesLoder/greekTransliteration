@@ -1,39 +1,32 @@
 {
   "name": "greektransliteration",
-  "description": "A site for transliterating Greek accoring to SBL guidelines",
-  "version": "0.0.1",
+  "description": "A site for custom Greek transliteration",
+  "version": "2.0.0",
   "author": "charlesLoder",
-  "ava": {
-    "verbose": "true"
-  },
   "bugs": "https://github.com/charlesLoder/greektransliteration/issues",
+  "homepage": "https://github.com/charlesLoder/greektransliteration",
+  "repository": "https://github.com/charlesLoder/greektransliteration",
+  "keywords": [
+    "greek",
+    "transliteration",
+    "SBL",
+    "romanization",
+    "koine"
+  ],
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production",
+    "update": "ncu"
+  },
   "dependencies": {
-    "greek-transliteration": "^1.0.0",
-    "jquery": "^3.4.1",
-    "reshape-standard": "^3.3.0",
-    "spike": "^2.3.0",
-    "spike-css-standards": "^4.0.0",
-    "spike-js-standards": "^2.1.0",
-    "spike-optimize": "^0.1.2",
-    "spike-page-id": "^1.1.0"
+    "greek-transliteration": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^1.4.1",
-    "rimraf": "^2.6.1",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
-  },
-  "homepage": "https://github.com/charlesLoder/greektransliteration",
-  "main": "app.js",
-  "private": true,
-  "repository": "https://github.com/charlesLoder/greektransliteration",
-  "scripts": {
-    "lint": "standard | snazzy",
-    "precommit": "npm run lint -s",
-    "pretest": "npm run lint -s",
-    "test": "NODE_ENV=test ava",
-    "start": "spike watch",
-    "build": "npx spike compile",
-    "prod": "NODE_ENV=production spike compile -e production"
+    "@11ty/eleventy": "^1.0.1",
+    "clean-css": "^5.3.0",
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.14.39",
+    "html-minifier": "^4.0.0",
+    "npm-check-updates": "^13.0.3"
   }
 }
