@@ -39,8 +39,3 @@
 .grc {
   font-family: SBL Greek, Times New Roman, serif;
 }
-
-.about-section:not(:last-child) {
-  margin-bottom: 1rem;
-  border-bottom: var(--base-border-width) solid var(--lm-dropdown-divider-bg-color);
-}
