@@ -1,0 +1,34 @@
+{
+  "title": "Greek Transliteration",
+  "nav": [
+    { "text": "Home", "url": "/" },
+    { "text": "About", "url": "/about" }
+  ],
+  "socialIcons": [
+    {
+      "faIcon": "fi-snsux2-twitter-solid",
+      "url": "https://twitter.com/charles_loder",
+      "text": "Twitter"
+    },
+    {
+      "faIcon": "fi-snsux2-dev-to",
+      "url": "https://dev.to/charlesloder",
+      "text": "Dev.to"
+    },
+    {
+      "faIcon": "fi-snsux2-github-alt",
+      "url": "https://github.com/charlesLoder",
+      "text": "Github"
+    },
+    {
+      "faIcon": "fi-snsuh2-graduation-cap-solid",
+      "url": "https://independentresearcher.academia.edu/CharlesLoder",
+      "text": "Academia.edu"
+    },
+    {
+      "faIcon": "fi-snsux2-linkedin",
+      "url": "https://www.linkedin.com/in/charles-loder/",
+      "text": "LinkedIn"
+    }
+  ]
+}
