@@ -28,8 +28,8 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        env:
+          GA_TAG_ID: ${{ secrets.GA_TAG_ID }}
         with:
           publish_dir: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          env:
-            REACT_APP_APIKey: ${{ secrets.GA_TAG_ID }}
