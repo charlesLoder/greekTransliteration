@@ -31,3 +31,5 @@ jobs:
         with:
           publish_dir: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          env:
+            REACT_APP_APIKey: ${{ secrets.GA_TAG_ID }}
