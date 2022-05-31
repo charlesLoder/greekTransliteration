@@ -1,12 +1,10 @@
 # greekTransliteration
 
-A web app that transliterates Greek text according to SBL guidelines using the `greek-transliteration` [package](https://www.npmjs.com/package/greek-transliteration).
+A web app for creating custom transliterations of Greek text using the `greek-transliteration` [package](https://www.npmjs.com/package/greek-transliteration).
 
 # install
 
 ## setup
-
-You will need `node` and `npm` installed.
 
 Download or clone this repository. Then
 
@@ -16,7 +14,8 @@ npm install
 npm run build
 ```
 
-This is just a local instillation of the site. If you are interested in improving the transliteration, please contribute to the `greek-transliteration` [package](https://www.npmjs.com/package/greek-transliteration).
+This site primarily serves as a UI.
+If you are interested in improving the transliteration, please contribute to the `greek-transliteration` [package](https://www.npmjs.com/package/greek-transliteration).
 
 # live
 
