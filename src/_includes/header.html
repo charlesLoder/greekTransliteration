@@ -33,7 +33,7 @@
               </button>
               <div class="dropdown-menu dropdown-menu-right w-200" aria-labelledby="navbar-dropdown-toggle-btn-1">
                 {% for item in config.nav %}
-                <a href="{{ item.url }}" class="dropdown-item">{{ item.text }}</a>
+                <a href="{{ item.url | url }}" class="dropdown-item">{{ item.text }}</a>
                 {% endfor %}
               </div>
             </div>
